@@ -14,19 +14,19 @@ namespace Oxie {
         }
 
         public void SetOxygenUsage(float usage) {
-            oxygenUsageLabel.Content = "Oxygen usage: " + usage.ToString() + " kg";
+            oxygenUsageLabel.Content = String.Format("Oxygen usage: {0} kg", UsageToStr(usage));
         }
 
         public void SetPropaneUsage(float usage) {
-            propaneUsageLabel.Content = "Propane usage: " + usage.ToString() + " kg";
+            propaneUsageLabel.Content = String.Format("Propane usage: {0} kg", UsageToStr(usage));
         }
 
         public void SetTotalOxygenUsage(float usage) {
-            totalOxygenLabel.Content = "Total oxygen usage: " + usage.ToString() + " kg";
+            totalOxygenLabel.Content = String.Format("Total oxygen usage: {0} kg", UsageToStr(usage));
         }
 
         public void SetTotalPropaneUsage(float usage) {
-            totalPropaneLabel.Content = "Total propane usage: " + usage.ToString() + " kg";
+            totalPropaneLabel.Content = String.Format("Total propane usage: {0} kg", UsageToStr(usage));
         }
 
         private void OnCuttingLengthChanged(object sender, System.Windows.Controls.TextChangedEventArgs e) {
@@ -51,6 +51,10 @@ namespace Oxie {
 
         private void OnAppendButtonClicked(object sender, RoutedEventArgs e) {
             presenter.OnAppendButtonClicked();
+        }
+
+        private string UsageToStr(float usage) {
+            return Math.Round(usage, 2).ToString();
         }
     }
 }
