@@ -23,24 +23,24 @@ namespace Oxie.Presenter {
         public void OnCuttingLengthChanged(int length) {
             calc.CuttingLength = length;
 
-            CalculateUsage();
+            calculateUsage();
         }
 
         public void OnThicknessChanged(int thickness) {
             calc.Thickness = thickness;
 
-            CalculateUsage();
+            calculateUsage();
         }
 
         public void OnAppendButtonClicked() {
-            AppendUsage();
+            appendUsage();
         }
 
         public void OnResetButtonClicked() {
-            ResetUsage();
+            resetUsage();
         }
 
-        private void CalculateUsage() {
+        private void calculateUsage() {
             try {
                 view.SetOxygenUsage(calc.OxygenUsage);
                 view.SetPropaneUsage(calc.PropaneUsage);
@@ -50,7 +50,7 @@ namespace Oxie.Presenter {
             }
         }
 
-        private void AppendUsage() {
+        private void appendUsage() {
             try {
                 setTotalOxygenUsage(totalOxygenUsage + calc.OxygenUsage);
                 setTotalPropaneUsage(totalPropaneUsage + calc.PropaneUsage);
@@ -59,7 +59,7 @@ namespace Oxie.Presenter {
             }
         }
 
-        private void ResetUsage() {
+        private void resetUsage() {
             setTotalOxygenUsage(0);
             setTotalPropaneUsage(0);
         }
