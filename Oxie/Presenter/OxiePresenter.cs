@@ -36,6 +36,10 @@ namespace Oxie.Presenter {
             AppendUsage();
         }
 
+        public void OnResetButtonClicked() {
+            ResetUsage();
+        }
+
         private void CalculateUsage() {
             try {
                 view.SetOxygenUsage(calc.OxygenUsage);
@@ -48,14 +52,26 @@ namespace Oxie.Presenter {
 
         private void AppendUsage() {
             try {
-                totalOxygenUsage += calc.OxygenUsage;
-                totalPropaneUsage += calc.PropaneUsage;
+                setTotalOxygenUsage(totalOxygenUsage + calc.OxygenUsage);
+                setTotalPropaneUsage(totalPropaneUsage + calc.PropaneUsage);
             } catch (InvalidThicknessError) {
                 return;
             }
+        }
 
-            view.SetTotalOxygenUsage(totalOxygenUsage);
-            view.SetTotalPropaneUsage(totalPropaneUsage);
+        private void ResetUsage() {
+            setTotalOxygenUsage(0);
+            setTotalPropaneUsage(0);
+        }
+
+        private void setTotalOxygenUsage(float usage) {
+            totalOxygenUsage = usage;
+            view.SetTotalOxygenUsage(usage);
+        }
+
+        private void setTotalPropaneUsage(float usage) {
+            totalPropaneUsage = usage;
+            view.SetTotalPropaneUsage(usage);
         }
     }
 }

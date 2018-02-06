@@ -56,5 +56,9 @@ namespace Oxie {
         private string UsageToStr(float usage) {
             return Math.Round(usage, 2).ToString();
         }
+
+        private void OnResetButtonClicked(object sender, RoutedEventArgs e) {
+            presenter.OnResetButtonClicked();
+        }
     }
 }
