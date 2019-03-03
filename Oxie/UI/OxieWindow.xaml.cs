@@ -29,6 +29,11 @@ namespace Oxie {
             totalPropaneLabel.Content = String.Format("Total propane usage: {0} kg", UsageToStr(usage));
         }
 
+        public void ResetInputFields() {
+            thicknessTextBox.Text = string.Empty;
+            cuttingLengthTextBox.Text = string.Empty;
+        }
+
         private void OnCuttingLengthChanged(object sender, System.Windows.Controls.TextChangedEventArgs e) {
             int cuttingLength;
             try {

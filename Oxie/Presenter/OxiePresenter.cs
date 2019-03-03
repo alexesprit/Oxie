@@ -54,6 +54,8 @@ namespace Oxie.Presenter {
             try {
                 setTotalOxygenUsage(totalOxygenUsage + calc.OxygenUsage);
                 setTotalPropaneUsage(totalPropaneUsage + calc.PropaneUsage);
+
+                view.ResetInputFields();
             } catch (InvalidThicknessError) {
                 return;
             }
@@ -62,6 +64,8 @@ namespace Oxie.Presenter {
         private void resetUsage() {
             setTotalOxygenUsage(0);
             setTotalPropaneUsage(0);
+
+            view.ResetInputFields();
         }
 
         private void setTotalOxygenUsage(float usage) {

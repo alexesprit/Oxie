@@ -5,5 +5,7 @@
 
         void SetTotalOxygenUsage(float usage);
         void SetTotalPropaneUsage(float usage);
+
+        void ResetInputFields();
     }
 }
