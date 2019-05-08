@@ -7,12 +7,12 @@
         mc:Ignorable="d"
         Title="Oxie" Height="300" Width="200" WindowStyle="ToolWindow" ResizeMode="NoResize">
     <Grid>
-        <TextBox x:Name="cuttingLengthTextBox" Margin="10,36,10,0" TextWrapping="Wrap" TextChanged="OnCuttingLengthChanged" Height="23" VerticalAlignment="Top"/>
-        <Label x:Name="label" Content="Cutting length, mm" Margin="10,10,10,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="cuttingLengthTextBox" Margin="10,90,10,0" TextWrapping="Wrap" TextChanged="OnCuttingLengthChanged" Height="23" VerticalAlignment="Top"/>
+        <Label x:Name="label" Content="Cutting length, mm" Margin="10,64,10,0" VerticalAlignment="Top"/>
         <Label x:Name="oxygenUsageLabel" Content="Oxygen" Margin="10,118,10,0" Height="26" VerticalAlignment="Top"/>
         <Label x:Name="propaneUsageLabel" Content="Propane" Margin="10,144,10,0" Height="26" VerticalAlignment="Top"/>
-        <Label x:Name="label1" Content="Thickness" HorizontalAlignment="Left" Margin="10,64,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="thicknessTextBox" Height="23" Margin="10,90,10,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalContentAlignment="Stretch" TextChanged="OnThicknessChanged"/>
+        <Label x:Name="label1" Content="Thickness" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" RenderTransformOrigin="1.662,0.513"/>
+        <TextBox x:Name="thicknessTextBox" Height="23" Margin="10,36,10,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalContentAlignment="Stretch" TextChanged="OnThicknessChanged"/>
         <Button x:Name="appendButton" Content="Append" HorizontalAlignment="Left" Margin="10,175,0,0" VerticalAlignment="Top" Width="84" Click="OnAppendButtonClicked"/>
         <Label x:Name="totalOxygenLabel" Content="Total oxygen usage" HorizontalAlignment="Left" Margin="10,200,0,0" VerticalAlignment="Top" Width="174"/>
         <Label x:Name="totalPropaneLabel" Content="Total propane usage" HorizontalAlignment="Left" Margin="10,231,0,0" VerticalAlignment="Top" Width="174"/>
