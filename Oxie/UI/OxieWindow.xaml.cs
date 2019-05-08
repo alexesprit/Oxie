@@ -32,6 +32,9 @@ namespace Oxie {
         public void ResetInputFields() {
             thicknessTextBox.Text = string.Empty;
             cuttingLengthTextBox.Text = string.Empty;
+
+            SetOxygenUsage(0);
+            SetPropaneUsage(0);
         }
 
         private void OnCuttingLengthChanged(object sender, System.Windows.Controls.TextChangedEventArgs e) {
