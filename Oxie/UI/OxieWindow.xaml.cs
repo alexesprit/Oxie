@@ -11,6 +11,8 @@ namespace Oxie {
         public MainWindow() {
             InitializeComponent();
             presenter = new OxiePresenter(this);
+
+            thicknessTextBox.Focus();
         }
 
         public void SetOxygenUsage(float usage) {
@@ -59,6 +61,8 @@ namespace Oxie {
 
         private void OnAppendButtonClicked(object sender, RoutedEventArgs e) {
             presenter.OnAppendButtonClicked();
+
+            thicknessTextBox.Focus();
         }
 
         private string UsageToStr(float usage) {
